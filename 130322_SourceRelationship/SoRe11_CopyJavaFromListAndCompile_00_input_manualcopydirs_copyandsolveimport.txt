@@ -1,0 +1,18 @@
+com.posco.mes.m80.common.bl.bc4j.vo
+com.posco.mes.m84.common.bl.bc4j.vo
+com.posco.mes.m80.common.bl.bli
+com.posco.mes.reuse.bc4j.eo.m80
+
+#The belows is from build.xml file
+com.posco.mes.m80.p050.app.monitoring.client
+com.posco.mes.m80.p050.app.uiapp
+com.posco.mes.m80.p050.app.m800501006
+com.posco.mes.m80.p050.app.m800506005
+com.posco.mes.m80.p050.app.m800503001
+com.posco.mes.m80.p050.app.appgen
+com.posco.mes.m80.p050.app.m800503084
+com.posco.mes.m80.p050.app.m800504065
+com.posco.mes.m80.p050.app.m800503088
+com.posco.mes.m80.p050.app.m800503059
+com.posco.mes.m80.p050.app.m800503101
+com.posco.mes.m80.p050.app.m800504123

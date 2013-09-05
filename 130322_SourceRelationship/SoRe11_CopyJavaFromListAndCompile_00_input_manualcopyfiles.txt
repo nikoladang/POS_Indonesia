@@ -1,0 +1,2 @@
+com.posco.mes.m80.common.bl.bc4j.am.PosYardAMImpl
+*.jpx

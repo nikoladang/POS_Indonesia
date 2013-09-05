@@ -1,0 +1,10 @@
+/com.posco.mes.m80.common.bl.bc4j.vo
+/com.posco.mes.m84.common.bl.bc4j.vo
+/com.posco.mes.reuse.bc4j.eo.m80
+/com.posco.mes.m80.common.bl.bli
+/com.posco.mes.m80.common.bl.boi
+/com.posco.mes.m80.common.app.cm
+/com.posco.mes.m84.common.bl.boi
+/com.posco.mes.m80.common.constants
+/com.posco.mes.m80.common.bl.cmbc4j.am
+com.posco.mes.m80.common.bl.bc4j.am
