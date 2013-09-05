@@ -1,0 +1,15 @@
+*http://www.codeproject.com/Articles/7305/Keyboard-Events-Simulation-using-keybd_event-funct
+http://stackoverflow.com/questions/1085694/whats-the-simplest-way-to-put-a-python-script-into-the-system-tray-windows
+http://stackoverflow.com/questions/3051030/how-can-i-paste-some-string-to-the-active-window-in-python
+http://stackoverflow.com/questions/11063458/python-script-to-copy-text-to-clipboard
+http://stackoverflow.com/questions/1007185/how-to-retrieve-the-selected-text-from-the-active-window
+http://stackoverflow.com/questions/6389580/quick-and-easy-trayicon-with-python
+http://mail.python.org/pipermail/python-list/2011-April/600957.html
+http://stackoverflow.com/questions/6843764/python-send-keys-on-windows
+
+
+
+--reference if have time----------------------------------
+http://omz-software.com/pythonista/docs/ios/clipboard.html
+http://stackoverflow.com/questions/14114581/pyhook-stops-capturing-key-events-after-6-presses
+http://stackoverflow.com/questions/9255030/using-python-and-pywin32-to-automate-data-entry
