@@ -2,7 +2,7 @@
 http://sourceforge.net/apps/mediawiki/pyhook/index.php?title=PyHook_Tutorial
 http://www.kbdedit.com/manual/low_level_vk_list.html
 """
-import Case00_commonJobs
+import PosMulti00_commonJobs
 
 import pythoncom, pyHook
 import win32gui
@@ -48,22 +48,22 @@ def OnKeyboardEvent(event):
             value = GetClipboardData()
             #========
             if event.KeyID == 118: #F7 key end with _000
-                foundKey = Case00_commonJobs.findCorrespondentKey(dataDict, value, labelLoweredStandardedDict)
+                foundKey = PosMulti00_commonJobs.findCorrespondentKey(dataDict, value, labelLoweredStandardedDict)
                 outputstring=re.sub('_000\d','_0000',foundKey)
                 pasteFlag = 1
             elif event.KeyID == 119: #F8 keep the key
-                foundKey = Case00_commonJobs.findCorrespondentKey(dataDict, value, labelLoweredStandardedDict)
+                foundKey = PosMulti00_commonJobs.findCorrespondentKey(dataDict, value, labelLoweredStandardedDict)
                 outputstring = foundKey
                 pasteFlag = 1
             elif event.KeyID == 121: #F10 keep the key
-                foundKey = Case00_commonJobs.findCorrespondentKey(dataDict, value, labelLoweredStandardedDict)
+                foundKey = PosMulti00_commonJobs.findCorrespondentKey(dataDict, value, labelLoweredStandardedDict)
                 foundKey = re.sub('_000\d','_0000',foundKey)
                 outputstring = '<posui:showLabel key="'+foundKey+'" />'
                 pasteFlag = 1
             elif event.KeyID == 122: #F11 header value with tooltip ; input value MUST start with > character
                 if re.search(r'^>', value):
                     value = value.lstrip(">")
-                    foundKey = Case00_commonJobs.findCorrespondentKey(dataDict, value, labelLoweredStandardedDict)
+                    foundKey = PosMulti00_commonJobs.findCorrespondentKey(dataDict, value, labelLoweredStandardedDict)
                     toolTip = re.sub('_000\d','_0000',foundKey)
                     outputstring = ' onmouseover="tooltipOn(\'<posui:showLabel key="'+toolTip+'" />\');" onmouseout="tooltipOff();"><posui:showLabel key="'+foundKey+'" />'
                     pasteFlag = 1
@@ -90,8 +90,8 @@ def OnKeyboardEvent(event):
 ##filename = r'C:\Documents and Settings\SoftVnn Member\My Documents\Dropbox\backUp\130401_MultiLanguageChanging\Tools\label_ko.properties'
 filename = r'label_ko.properties'
 
-dataDict = Case00_commonJobs.addDataToDict(filename, 1)
-labelLoweredStandardedDict = Case00_commonJobs.addDataToDict(filename,1,1)
+dataDict = PosMulti00_commonJobs.addDataToDict(filename, 1)
+labelLoweredStandardedDict = PosMulti00_commonJobs.addDataToDict(filename,1,1)
 
     
 # create a hook manager

@@ -189,7 +189,7 @@ def searchValueExistedInLabelListWithStandards():
                 keyFound=re.sub('_000\d','_0000',keyFound)
 ##            print(findstring+' ---> '+ '<posui:showLabel key="'+keyFound+'" />')
 ##            print(findstring+' ---> '+'PosGlobalHandler.getLabel("'+keyFound+'")')
-            print(keyFound)
+            print(keyFound + ' <--' + findstring)
         else:
             print(findstring)
             keyNotFoundSet.add(findstring)
