@@ -1,29 +1,39 @@
 """
 130619 : Initial
 """
-import Job04_RetrieveVOFromJavaJsp_00_constants as constants
+import SoRe04_RetrieveVOFromJavaJsp_00_constants as constants
 import teocommon_operation
 
 import os, sys, re
 from datetime import datetime
 
-root = r'C:\130805_DEV\DEV'
+root = r'C:\140107_India_CRM_M83'
 
 src_path = root + '\src'
-outputfilename = 'Job04__00_output.txt'
+outputfilename = 'SoRe04_00_output_JavaJsp.txt'
 ##config_path = root + '\config'
-##publichtml_path = root + '\public_html'
+publichtml_path = root + '\public_html'
 
 class RetrieveVOFromJavaJsp(object):
     def main(self):
         self.wf = open(outputfilename,'w', -1, encoding='utf-8')
-        for root, dirs, files in os.walk(src_path):
-            for file in files:
-                if file.endswith('.java'):
-                    self.fileprocess(root+'\\'+file)
+        self.retrieveVOFromJava(src_path)
+        self.retrieveVOFromJsp(publichtml_path)
         self.wf.close()
 
-    def fileprocess(self, fullfilepath):
+    def retrieveVOFromJava(self, srcpath):
+        for root, dirs, files in os.walk(srcpath):
+            for file in files:
+                if file.endswith('.java'):
+                    self.core_fileprocess(root+'\\'+file)
+
+    def retrieveVOFromJsp(self, publichtmlpath):
+        for root, dirs, files in os.walk(publichtmlpath):
+            for file in files:
+                if file.endswith('.jsp'):
+                    self.core_fileprocess(root+'\\'+file)
+    
+    def core_fileprocess(self, fullfilepath):
         if os.access(fullfilepath, os.R_OK):
             with open(fullfilepath,'r',-1,encoding='utf-8') as fp:
                 try:
@@ -36,13 +46,11 @@ class RetrieveVOFromJavaJsp(object):
                             if m:
                                 outputstring += fullfilepath+':::'+str(i+1)+'\t'+line
 ##                                sys.stdout.write(fullfilepath+':::'+str(i+1)+'\t'+line)
-                                break
+                                break   #need for improve performance
                     self.wf.write(outputstring)
                 except:
                     print(str(sys.exc_info()[0]) + fullfilepath)
 
-    def printtofile(self, zzz):
-        pass
 def run():
     startTime = datetime.now()
     print ("Start time: " + str(startTime))
