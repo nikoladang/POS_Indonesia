@@ -1,0 +1,50 @@
+-VO inside these functions: 
+	+ com.posco.mes.reuse.bc4j.common.PosApplicationModuleImpl : Search for viewObjectName 
+		public void add(String viewObjectName, Map map)
+		public void add(String viewObjectName, Map map, String dmlTransactionMode)
+		public Row addBeforeGet(String viewObjectName, Map map)
+		public Row addBeforeGet(String viewObjectName, Map map, String dmlTransactionMode)
+		public void modify(String viewObjectName, String whereClause, Object whereClauseParams[], Map map)
+		public void modify(String viewObjectName, String whereClause, Object whereClauseParams[], Map map, boolean isClearFlag)
+		public void modify(String viewObjectName, String whereClause, Object whereClauseParams[], Map map, String dmlTransactionMode)
+		public void modify(String viewObjectName, String whereClause, Object whereClauseParams[], Map map, String dmlTransactionMode, boolean isClearFlag)
+		public int countModify(String viewObjectName, String whereClause, Object whereClauseParams[], Map map)
+		public int countModify(String viewObjectName, String whereClause, Object whereClauseParams[], Map map, boolean isClearFlag)
+		public int countModify(String viewObjectName, String whereClause, Object whereClauseParams[], Map map, String dmlTransactionMode)
+		public int countModify(String viewObjectName, String whereClause, Object whereClauseParams[], Map map, String dmlTransactionMode, boolean isClearFlag)
+		public void remove(String viewObjectName, Object id)
+		public void removeByTransaction(String viewObjectName, Object id, String dmlTransactionMode)
+		public void remove(String viewObjectName, String whereClause, Object whereClauseParams[])
+		public void remove(String viewObjectName, String whereClause, Object whereClauseParams[], boolean isClearFlag)
+		public void remove(String viewObjectName, String whereClause, Object whereClauseParams[], String dmlTransactionMode)
+		public void remove(String viewObjectName, String whereClause, Object whereClauseParams[], String dmlTransactionMode, boolean isClearFlag)
+		public int countRemove(String viewObjectName, String whereClause, Object whereClauseParams[])
+		public int countRemove(String viewObjectName, String whereClause, Object whereClauseParams[], boolean isClearFlag)
+		public int countRemove(String viewObjectName, String whereClause, Object whereClauseParms[], String dmlTransactionMode)
+		public int countRemove(String viewObjectName, String whereClause, Object whereClauseParms[], String dmlTransactionMode, boolean isClearFlag)
+		public Row findBusinessObject(String viewObjectName, Object id)
+		public ViewObject findAllBusinessObjects(String viewObjectName)
+		public ViewObject findAllBusinessObjects(String viewObjectName, boolean isClearFlag)
+		public ViewObject findRestrictedBusinessObjects(String viewObjectName, String whereClause, Object whereClauseParams[], boolean isForwardOnly)
+		public ViewObject findRestrictedBusinessObjects(String viewObjectName, String whereClause, Object whereClauseParams[], boolean isForwardOnly, boolean isClearFlag)
+		public ViewObject findRestrictedBusinessObjects(String viewObjectName, String whereClause, Object whereClauseParams[], String orderBy, boolean isForwardOnly)
+		public ViewObject findRestrictedBusinessObjects(String viewObjectName, String whereClause, Object whereClauseParams[], String orderBy, boolean isForwardOnly, boolean isClearFlag)
+		public ViewObject findDetailBusinessObjects(String viewObjectName, String whereClause, Object whereClauseParams[], boolean isForwardOnly)
+		public ViewObject findDetailBusinessObjects(String viewObjectName, String whereClause, Object whereClauseParams[], boolean isForwardOnly, boolean isClearFlag)
+		public ViewObject findMasterBusinessObjects(String viewObjectName, String whereClause, Object whereClauseParams[], boolean isForwardOnly)
+		public ViewObject findMasterBusinessObjects(String viewObjectName, String whereClause, Object whereClauseParams[], boolean isForwardOnly, boolean isClearFlag)
+		public void upsert(ArrayList arrayList, String viewObjectName)
+		public void upsert(ArrayList arrayList, String viewObjectName, int upsertLockWaitTime)
+		public void upsert(ArrayList arrayList, String viewObjectName, boolean doPostChange)
+		public void upsert(ArrayList arrayList, String viewObjectName, int upsertLockWaitTime, boolean doPostChange)
+	+ com.posco.mes.m80.common.bl.bc4j.am.PosYardAMImpl
+	+ com.posco.mes.m80.common.helper.PosDynamicQueryHelper
+		public static Object executeSingleQuery(String stmt, List bindValues, DBTransaction trans) throws SQLException
+		public static ArrayList executeQuery(String stmt, List bindValues, DBTransaction trans) throws SQLException
+		public static ArrayList doQueryRows(String stmt, List bindValues, DBTransaction trans) throws SQLException
+		public static String convertQuery(String stmt, List bindValues)
+		
+- VO inside this:
+	src/com/posco/mes/m80/common/bl/bc4j/am/(PosYardBOLoaderAMImpl.java)
+	src\com\posco\mes\m81\common\bl\bc4j\am
+	src\com\posco\mes\m84\common\bl\bc4j\am
