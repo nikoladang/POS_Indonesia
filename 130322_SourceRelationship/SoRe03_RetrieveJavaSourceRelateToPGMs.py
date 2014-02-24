@@ -1,4 +1,5 @@
 """
+prerequisites: use SoRe07_JSPsRelatingToPGMIDs.py for retrieve teoconstants.jsps data
 130611 : Initial
 130613: + apply for multi-screen
     + apply global variable for screenJavaList (IMPORTANT)
@@ -11,7 +12,7 @@
 
 TODO: deprecate 2 functions convertPackageFilenameToFullpath, convertFullpathToPackageFileName with teocommon_operation.py
 """
-from Job00_commonJobs import commonJobs
+from SoRe00_commonJobs import commonJobs
 import teoconstants
 
 import cx_Oracle
@@ -22,11 +23,11 @@ from datetime import datetime
 ##root = r'C:\130617_Temp\Temp\poscoMES_M80\Pgm_Dev\2nd_iteration'
 ##root = r'C:\convert_source_old5\convert_source'
 ##root = r'D:\03_Downloads\abc\abc\Temp\poscoMES_M60\Pgm_Dev\2nd_iteration'
-root = r'C:\130805_DEV\DEV'
+root = r'C:\140107_India_CRM_M83'
 config_path = root + '\config'
 publichtml_path = root + '\public_html'
 src_path = root + '\src'
-outputfilename = 'Job03_RetrieveJavaSourceRelateToPGMs_00_outputMaab.txt'
+outputfilename = 'SoRe03_RetrieveJavaSourceRelateToPGMs_00_output.txt'
 
 screenJavaList = [] ##GLOBAL
 
@@ -45,7 +46,7 @@ class RetrieveJavaSourceRelateToPGMs(object):
     def main(self, srcpath, configpath, publichtmlpath, uipgmslist):
         self.wf = open(outputfilename,'w', -1, encoding='utf-8')
         self.retrieveJavaFilesFromJspAndService(srcpath, configpath, publichtmlpath, uipgmslist)
-##        self.retrieveJavaFilesFromTC(srcpath, teoconstants.tclist)
+        self.retrieveJavaFilesFromTC(srcpath, teoconstants.tclist)
 ##        self.retrieveJavaFilesFromCMJavaFileList(srcpath, srcpath+"\\"+teoconstants.cm_package_path, teoconstants.cmjavafilelist)
         self.wf.close()
 
@@ -74,7 +75,7 @@ class RetrieveJavaSourceRelateToPGMs(object):
     def retrieveJavaFilesFromTC(self, srcpath, tclist):
         global screenJavaList
         sqlbindingstring = ''
-        query = teoconstants.retrievejavafromtcquery
+        query = teoconstants.sore03_retrievejavafromtcquery
         for tc in tclist:
             sqlbindingstring += "'" +tc+"',"
         sqlbindingstring = sqlbindingstring.rstrip(",")
@@ -227,4 +228,3 @@ class RetrieveJavaSourceRelateToPGMs(object):
             if convertedValue not in screenJavaList:
                 screenJavaList.append(convertedValue)
             self.recur(srcpath, value)
-

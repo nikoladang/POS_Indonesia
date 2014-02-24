@@ -2,7 +2,7 @@
 Purpose: retrieve all gif files used inside jsp
 130611 : Initial
 """
-from  Job07_JSPsRelatingToPGMIDs import JSPsRelatingToPGMIDs
+from  SoRe07_JSPsRelatingToPGMIDs import JSPsRelatingToPGMIDs
 import teoconstants
 ##from Job00_commonJobs import commonJobs
 

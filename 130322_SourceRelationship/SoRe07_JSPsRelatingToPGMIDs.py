@@ -8,15 +8,15 @@ Cases: 3 cases
 130701: Initial
 130821: main function return result 
 """
-from Job00_commonJobs import commonJobs
+from SoRe00_commonJobs import commonJobs
 import teocommon_operation
 import teoconstants
 
 import sys, os, re
 from datetime import datetime
 
-root = r'C:\130821_DEV\DEV'
-output_filename = r'Job07__00_outputtabc.txt'
+root = r'C:\140107_India_CRM_M83'
+output_filename = r'SoRe07_00_output.txt'
 
 def run():
     startTime = datetime.now()
